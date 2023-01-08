@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <script src="https://kit.fontawesome.com/f22559516b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" async></script>
+</head>
+<body>
+    <header>
+        <h1>Notes</h1>
+        <div class="note-icons">
+            <i class="fa-solid fa-plus icon" id="addnote" ></i>
+            <i class="fa-solid fa-circle-half-stroke icon" id="changethemeintoblack"></i>
+            <i class="fa-solid fa-circle-half-stroke icon" id="changethemeintowhite" ></i>
+        </div>
+    </header>
+    <main>
+        <nav>
+            <i class="fa-solid fa-arrow-left icon" id="back-icon"></i>
+            <div class="note-icons">
+                <i class="fa-regular fa-floppy-disk icon" id="save"></i>
+                <i class="fa-solid fa-trash icon" id="deleteIcon"></i>
+            </div>
+        </nav>
+        <div class="text" id="text">
+            <input type="text"    placeholder="subject(optional):" id="subject">
+            <textarea  name="textarea"  id="textArea"></textarea>
+        </div>
+    </main>
+
+    <!-- <script>
+        let save = document.querySelector('#save');
+        let subject = document.getElementById("subject");
+        let textArea = document.getElementById('textArea');
+        let deleteIcon = document.getElementById('deleteIcon');
+        //theme
+        let changethemeintowhite = document.getElementById('changethemeintowhite');
+        let changethemeintoblack = document.getElementById('changethemeintoblack'); 
+        let main = document.querySelector('main');
+        changethemeintoblack.addEventListener('click',()=>{
+            main.style.backgroundColor = 'black';
+            changethemeintowhite.style.display = 'flex';
+            changethemeintoblack.style.display = 'none';
+        })
+        changethemeintowhite.addEventListener('click',()=>{
+            main.style.backgroundColor = 'white';
+            
+            changethemeintowhite.style.display = 'none';
+            changethemeintoblack.style.display = 'flex';
+        })
+        //end
+        save.addEventListener('click', ()=>{
+            localStorage.setItem('sub', JSON.stringify(subject.value));
+            localStorage.setItem('text', JSON.stringify(textArea.value));
+            
+        });
+
+        //bacicon
+        let backIicon = document.getElementById('back-icon');
+        let nav = document.querySelector('nav');
+        backIicon.addEventListener('click',back);
+        function back(){
+            main.style.width = '98%';
+            main.style.backgroundColor = 'whitesmoke';
+            main.style.height = '10vh';
+            main.style.padding = '.7rem';
+            main.style.margin = '1rem auto';
+            nav.style.display = 'none';
+            textArea.style.display = 'none';
+            subject.addEventListener('click',resize);
+
+        }
+        function resize(){
+            main.style.width = '100%';
+            nav.style.display = 'flex';
+            main.style.height = '100vh';
+            main.style.padding = '0';
+            main.style.margin = '0';
+            textArea.style.display = 'flex';
+        }
+        (function autosave(){
+            subject.value = JSON.parse(localStorage.getItem('sub'));
+            textArea.value = JSON.parse(localStorage.getItem('text'));
+            //textArea.value = JSON.parse('note');
+        })();
+        
+        function deleteNote(){
+            localStorage.removeItem('sub');
+            subject.value = '';
+            localStorage.removeItem('text');
+            textArea.value = '';
+        }
+        deleteIcon.addEventListener('click',deleteNote);
+       
+
+        
+    </script> -->
+</body>
+</html>
