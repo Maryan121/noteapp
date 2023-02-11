@@ -33,7 +33,6 @@ function addNote(text=""){
     container.innerHTML = 
     `
         <nav>
-            <i class="fa-solid fa-arrow-left icon back-arrow" id="back-icon"></i>
             <div class="note-icons">
                 <i class="fa-regular fa-floppy-disk icon save" id="save"></i>
                 <i class="fa-solid fa-trash icon delete" id=""></i>
